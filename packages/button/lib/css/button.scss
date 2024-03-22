@@ -1,0 +1,52 @@
+@use "abstracts/colors" as *;
+
+.button {
+  --button-padding-y: 8px;
+
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+
+  border: none;
+  border-radius: 6px;
+  box-shadow: var(--button-shadow, $default-shadow);
+  background-color: var(--button-bg, $default-bg);
+  padding: var(--button-padding-y) calc(var(--button-padding-y) * 2);
+
+  font-family: "Noto Sans JP", sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--button-color, $default-color);
+
+  transition: background-color 0.1s ease;
+
+  &:hover,
+  &:focus {
+    --button-bg: var(--button-bg-hover, #{$default-bg-hover});
+  }
+
+  &:disabled {
+    --button-shadow: none;
+    --button-outline-color: var(
+      --button-outline-color-disabled,
+      #{$default-bg-hover}
+    );
+    --button-bg: var(--button-bg-disabled, #{$default-bg-disabled});
+    --button-color: var(--button-color-disabled, #{$default-color-disabled});
+  }
+
+  &--icon {
+    padding: var(--button-padding-y);
+  }
+
+  &--no-shadow {
+    --button-shadow: none;
+  }
+
+  &--small {
+    --button-padding-y: 6px;
+  }
+  &--large {
+    --button-padding-y: 12px;
+  }
+}

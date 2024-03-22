@@ -1,0 +1,44 @@
+[class*="material-icons"] {
+  color: var(--icon-color, inherit);
+  width: 1em;
+  height: 1em;
+  overflow: hidden;
+  font-size: var(--icon-size, 24px) !important;
+}
+
+.material-icons {
+  &--small {
+    --icon-size: var(--icon-small, 18px);
+  }
+  &--large {
+    --icon-size: var(--icon-large, 36px);
+  }
+
+  &--primary {
+    --icon-color: var(--icon-color-primary, #2962ff);
+  }
+
+  &--secondary {
+    --icon-color: var(--icon-color-secondary, #455a64);
+  }
+
+  &--error {
+    --icon-color: var(--icon-color-error, #f44336);
+  }
+
+  &--warning {
+    --icon-color: var(--icon-color-warning, #ffa726);
+  }
+
+  &--info {
+    --icon-color: var(--icon-color-info, #29b6f6);
+  }
+
+  &--success {
+    --icon-color: var(--icon-color-success, #66bb6a);
+  }
+
+  &--disabled {
+    --icon-color: var(--icon-color-disabled, rgba(0, 0, 0, 0.26));
+  }
+}

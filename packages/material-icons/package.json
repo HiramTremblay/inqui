@@ -1,0 +1,61 @@
+{
+  "name": "@hdoc/react-material-icons",
+  "private": false,
+  "version": "1.5.0",
+  "type": "module",
+  "license": "MIT",
+  "author": "Héctor Ochoa <hector.ochoa.dev@gmail.com>",
+  "description": "A react component for material icons",
+  "main": "dist/react-material-icons.js",
+  "types": "dist/main.d.ts",
+  "files": [
+    "dist"
+  ],
+  "sideEffets": [
+    "**/*.css"
+  ],
+  "prepublishOnly": "pnpm run build ",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
+    "preview": "vite preview"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Hdoc1509/react-components.git",
+    "directory": "packages/material-icons"
+  },
+  "bugs": {
+    "url": "https://github.com/Hdoc1509/react-components/issues"
+  },
+  "homepage": "https://github.com/Hdoc1509/react-components/tree/master/packages/material-icons#readme",
+  "keywords": [
+    "react",
+    "react-component",
+    "material",
+    "material-design",
+    "material-icons",
+    "material-ui",
+    "icons"
+  ],
+  "dependencies": {
+    "clsx": "^2.0.0"
+  },
+  "devDependencies": {
+    "@material-design-icons/font": "0.14.10",
+    "@vitejs/plugin-react-swc": "3.3.2",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "sass": "1.65.0",
+    "typescript": "5.0.2",
+    "vite": "4.4.5",
+    "vite-plugin-dts": "3.5.1",
+    "vite-plugin-lib-inject-css": "1.2.0"
+  },
+  "peerDependencies": {
+    "@material-design-icons/font": "^0.14.0",
+    "react": "^17.0.0 || ^18.0.0",
+    "react-dom": "^17.0.0 || ^18.0.0"
+  }
+}
